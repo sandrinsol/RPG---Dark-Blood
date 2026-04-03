@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eldritch Archive - Battle Encounter</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffe088",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed": "#241a00",
+                        "secondary": "#ddb7ff",
+                        "on-secondary-fixed-variant": "#622599",
+                        "surface-bright": "#393939",
+                        "on-background": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "surface-variant": "#353534",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#3c2f00",
+                        "outline": "#978e96",
+                        "on-primary-fixed-variant": "#920703",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "primary-fixed": "#ffdad4",
+                        "primary": "#ffb4a8",
+                        "on-secondary": "#4a0080",
+                        "tertiary": "#e9c349",
+                        "inverse-on-surface": "#313030",
+                        "surface-tint": "#ffb4a8",
+                        "secondary-container": "#622599",
+                        "on-secondary-container": "#d1a1ff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-container": "#cca72f",
+                        "error-container": "#93000a",
+                        "primary-container": "#4d0000",
+                        "inverse-primary": "#b52619",
+                        "secondary-fixed": "#f0dbff",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "on-primary": "#690000",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#4e3d00",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "outline-variant": "#4b454b",
+                        "on-secondary-fixed": "#2c0050",
+                        "on-surface-variant": "#cec4cc",
+                        "on-primary-fixed": "#410000",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "on-primary-container": "#f1523e",
+                        "secondary-fixed-dim": "#ddb7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Newsreader"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        .parchment-texture {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB4Ljarn-0LNMfl4RWTmWXC76eG_wGVdtYPNOC6AYdmVt09wu1aUVWmJuhpkA4qt5vqTqCuaDd4D_ba3thn88qJx3aSGvxvBC8XcdGHdfRfluHs3Oby2j8ARXuUKLuNne_i62O60g5PpM2NzZ_MooXri5FhXK_xh01na6iLD5LxcXowfxntMOVgLyc7JqzmkBlbrozZ_hgDWKZ2KVWqwZAaI3vwxKNsSXY-HbiEEJf_mE1VSixfpPXwQAjIPJVNH-5VJHEgauNUdeFb)
+        }
+        .vignette {
+            box-shadow: inset 0 0 250px rgba(0, 0, 0, 0.95)
+        }
+        .pedestal {
+            background: radial-gradient(circle, rgba(60,60,60,0.8) 0%, rgba(20,20,20,0.95) 70%, transparent 100%);
+            border: 2px solid rgba(255, 180, 168, 0.2);
+            transform: rotateX(75deg);
+        }
+        .pedestal-runes {
+            background-image: repeating-conic-gradient(from 0deg, transparent 0 30deg, rgba(146, 7, 3, 0.15) 30deg 60deg);
+            mask-image: radial-gradient(circle, black 40%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-black text-on-surface font-body selection:bg-primary/30 min-h-[1080px] w-[1920px] mx-auto overflow-hidden flex flex-col items-center justify-center relative">
+<!-- Background Layer -->
+<div class="absolute inset-0 z-0">
+<img alt="interior of a dark ruined gothic cathedral" class="w-full h-full object-cover brightness-[0.15] contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc-FnVREY3K9oIUp7QClt1yv5bOTZd4STvgBww52lmy2rQm_kHoEGW2P2lSgTRO70CJ3oZQEohLRudAmbDu68IKdUPjLzHAbnxjh8guyUEuqbxXobectC5DbCb7HuBKcHKGoe_71LPQKVVteL3ehRRZvHQqyX5fpdfHaDXfLxjRGNYVepHfI6JHUZFkFctBHzsycpNxJVV2BzHbrbYfX2ffqx3sLcjRucIIYzvbrT_DaPQl4GYUMDW6SN1GA0KgeRjln9hbHw3FiIE"/>
+<div class="absolute inset-0 vignette"></div>
+</div>
+<!-- Main Battle Arena -->
+<main class="relative z-10 w-full h-full flex items-center justify-between px-48">
+<!-- Player Side -->
+<div class="relative w-[500px] h-[800px] flex flex-col items-center justify-end">
+<!-- Player Stats -->
+<div class="absolute top-0 w-80 bg-surface-container-low/90 border-t border-b border-primary/20 p-5 shadow-2xl backdrop-blur-md z-20 parchment-texture before:absolute before:inset-0 before:bg-black/50 before:-z-10">
+<div class="flex justify-between items-baseline mb-3">
+<span class="font-headline text-2xl text-on-surface uppercase tracking-[0.2em]">Player</span>
+</div>
+<!-- Health Bar -->
+<div class="mb-4">
+<div class="flex justify-between text-[11px] font-label text-stone-400 tracking-widest mb-1.5">
+<span>HEALTH</span>
+<span class="text-primary font-bold uppercase">120 / 200</span>
+</div>
+<div class="h-2.5 w-full bg-stone-950 overflow-hidden border border-stone-800">
+<div class="h-full bg-primary w-[60%]"></div>
+</div>
+</div>
+<!-- Mana Bar -->
+<div class="mb-4">
+<div class="flex justify-between text-[11px] font-label text-stone-400 tracking-widest mb-1.5">
+<span>MANA</span>
+<span class="text-secondary font-bold uppercase">85 / 100</span>
+</div>
+<div class="h-2 w-full bg-stone-950 overflow-hidden border border-stone-800">
+<div class="h-full bg-secondary w-[85%]"></div>
+</div>
+</div>
+<!-- EXP Bar -->
+<div>
+<div class="flex justify-between text-[11px] font-label text-stone-400 tracking-widest mb-1.5">
+<span>EXP</span>
+<span class="text-tertiary font-bold uppercase">30%</span>
+</div>
+<div class="h-1.5 w-full bg-stone-950 overflow-hidden border border-stone-800">
+<div class="h-full bg-tertiary w-[30%]"></div>
+</div>
+</div>
+</div>
+<!-- Pedestal -->
+<div class="absolute bottom-0 w-[500px] h-[200px] flex items-center justify-center opacity-80"><img alt="Pedestal" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiz95RurvVamrU2dlEqGKZjDgJ849LYVbUJBPJfBKRpFEzvA1_MkRRscl4nDCwn7cANrTMejqpM-uMoyQ9VLh3Z5q3HAHMtGr2qgJjZSMf679B-34GoO4IZJU8RyJak0rS33cIsLIo7iM54JAH1yHv_vI7rNp-dT9uHDcpVRjmnqkjumQxEXhBR_nIZonbbAa-Xekk_K46a_edmG3R2MVquEoLDThMnWqeFqxB8-X96PPcJELGdUDnW3hoRH1Hjl-dCP5RCnF0JHQA"/></div>
+<!-- Character (PNG with transparent bg) -->
+<div class="relative z-10 mb-8 h-[600px] w-full flex items-center justify-center">
+<img alt="female gothic hunter" class="h-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" src="https://lh3.googleusercontent.com/aida/ADBb0ujE3IraH8OUi8R_PEH3QDEetL29ThK0m2sUNtzK5poT2NJr4v_wEQSdI3Dkf1MThKrdMeLfJ5BUd2RDUiRW5e73toPOHnt27TWmjIrdAWREztXAhnzYJbvIDSWogBfe9dOmSzRhdHZWGtTsAzYIaxcNyTU2UhNSGnTTffHdZfgRSMY6Q9QkyvGwJKW_ieRKvK2cdZN7nohOuGdIDBzahIs2p9FVJvZu8ix4dPtcC8fnAhTK9vGvPSpxgM2zKl3oectcP0NW6VSaY10"/>
+</div>
+</div>
+<!-- Enemy Side -->
+<div class="relative w-[500px] h-[800px] flex flex-col items-center justify-end">
+<!-- Enemy Stats -->
+<div class="absolute top-0 w-80 bg-surface-container-low/90 border-t border-b border-red-900/40 p-5 shadow-2xl backdrop-blur-md z-20 parchment-texture before:absolute before:inset-0 before:bg-black/50 before:-z-10">
+<div class="text-right mb-3">
+<span class="font-headline text-2xl text-on-surface uppercase tracking-[0.2em]">Enemy</span>
+</div>
+<!-- Enemy Health Bar -->
+<div>
+<div class="flex justify-between text-[11px] font-label text-stone-400 tracking-widest mb-1.5">
+<span class="text-red-900 font-bold uppercase">HEALTH</span>
+<span class="text-primary font-bold uppercase">85%</span>
+</div>
+<div class="h-2.5 w-full bg-stone-950 overflow-hidden border border-stone-800">
+<div class="h-full bg-primary w-[85%] shadow-[0_0_15px_rgba(255,180,168,0.4)]"></div>
+</div>
+</div>
+</div>
+<!-- Pedestal -->
+<div class="absolute bottom-0 w-[500px] h-[200px] flex items-center justify-center opacity-80"><img alt="Pedestal" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiz95RurvVamrU2dlEqGKZjDgJ849LYVbUJBPJfBKRpFEzvA1_MkRRscl4nDCwn7cANrTMejqpM-uMoyQ9VLh3Z5q3HAHMtGr2qgJjZSMf679B-34GoO4IZJU8RyJak0rS33cIsLIo7iM54JAH1yHv_vI7rNp-dT9uHDcpVRjmnqkjumQxEXhBR_nIZonbbAa-Xekk_K46a_edmG3R2MVquEoLDThMnWqeFqxB8-X96PPcJELGdUDnW3hoRH1Hjl-dCP5RCnF0JHQA"/></div>
+<!-- Monster (PNG with transparent bg) -->
+<div class="relative z-10 mb-8 h-[600px] w-full flex items-center justify-center">
+<img alt="ethereal phantom" class="h-full object-contain filter contrast-125 saturate-50 brightness-90 drop-shadow-[0_20px_50px_rgba(0,0,0,1)] scale-x-[-1]" src="https://lh3.googleusercontent.com/aida/ADBb0uj8yP12Fwtk4Lx6-Pi4HWEDGzRncA77B072AltfZXAtLoQWX5SYgH54Om4cpJ2fozO30cyAnujPs25Q_gsg2G2CJ7UjA4g6b6vOvsua1MgzFWZlKCdwH8gg-S20Li5yClGJKUWo4GDQT2Fne3vyFcPOukQIJ3ebib5VY1zot6VhdQtLsYyjQidD7R1nhxv0EqkXn5yDYDsQqd5lBtE74R1SaoUqqjEdx5c76kgeDMluzbr0pay_ay1qI_LuZ21BCQxiWUwgF06ctw0"/>
+</div>
+</div>
+</main>
+<!-- Combat Actions Overlay (Bottom Region) -->
+<div class="absolute bottom-0 left-0 w-full z-20 flex flex-col items-center p-16 bg-gradient-to-t from-black via-black/90 to-transparent">
+<div class="grid grid-cols-4 gap-6 w-full max-w-5xl">
+<button class="group relative py-6 bg-stone-950/80 border border-stone-800 hover:border-primary transition-all duration-300 backdrop-blur-sm">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-stone-600 text-2xl group-hover:text-primary transition-colors mb-2">swords</span>
+<span class="font-headline text-2xl tracking-tight text-on-surface">ATTACK</span>
+</div>
+<div class="absolute inset-x-0 bottom-0 h-[3px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></div>
+</button>
+<button class="group relative py-6 bg-stone-950/80 border border-stone-800 hover:border-secondary transition-all duration-300 backdrop-blur-sm">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-stone-600 text-2xl group-hover:text-secondary transition-colors mb-2">auto_fix_high</span>
+<span class="font-headline text-2xl tracking-tight text-on-surface">SKILL</span>
+</div>
+<div class="absolute inset-x-0 bottom-0 h-[3px] bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></div>
+</button>
+<button class="group relative py-6 bg-stone-950/80 border border-stone-800 hover:border-tertiary transition-all duration-300 backdrop-blur-sm">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-stone-600 text-2xl group-hover:text-tertiary transition-colors mb-2">experiment</span>
+<span class="font-headline text-2xl tracking-tight text-on-surface">ITEM</span>
+</div>
+<div class="absolute inset-x-0 bottom-0 h-[3px] bg-tertiary scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></div>
+</button>
+<button class="group relative py-6 bg-stone-950/80 border border-stone-800 hover:border-red-900 transition-all duration-300 backdrop-blur-sm">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-stone-600 text-2xl group-hover:text-red-600 transition-colors mb-2">directions_run</span>
+<span class="font-headline text-2xl tracking-tight text-on-surface">RUN</span>
+</div>
+<div class="absolute inset-x-0 bottom-0 h-[3px] bg-red-900 scale-x-0 group-hover:scale-x-100 transition-transform origin-center"></div>
+</button>
+</div>
+</div>
+<!-- Dust/Particles -->
+<div class="fixed inset-0 pointer-events-none z-5 opacity-30 mix-blend-screen">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] animate-pulse"></div>
+</div>
+</body></html>

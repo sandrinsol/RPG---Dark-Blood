@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#ff907f",
+                        "inverse-on-surface": "#313030",
+                        "tertiary": "#ffb4a8",
+                        "primary": "#ffb4a8",
+                        "on-secondary-fixed-variant": "#574500",
+                        "primary-container": "#8b0000",
+                        "on-secondary-container": "#342800",
+                        "secondary": "#e9c349",
+                        "outline-variant": "#5a403c",
+                        "on-secondary": "#3c2f00",
+                        "surface-variant": "#353534",
+                        "surface": "#131313",
+                        "on-tertiary-container": "#ff907f",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-container-highest": "#353534",
+                        "on-primary": "#690000",
+                        "tertiary-container": "#7c2218",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#aa8984",
+                        "on-primary-fixed": "#410000",
+                        "surface-dim": "#131313",
+                        "on-tertiary-fixed-variant": "#82261b",
+                        "surface-container": "#201f1f",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "surface-bright": "#3a3939",
+                        "on-surface-variant": "#e3beb8",
+                        "surface-tint": "#ffb4a8",
+                        "tertiary-fixed": "#ffdad4",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#630f08",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#410000",
+                        "on-background": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#930000",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#bd1209",
+                        "secondary-container": "#af8d11",
+                        "on-secondary-fixed": "#241a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Newsreader"],
+                        "label": ["Newsreader"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0e0e0e;
+            font-family: 'Newsreader', serif;
+        }
+        .gothic-panel {
+            background: linear-gradient(135deg, #131313 0%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .gothic-panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            pointer-events: none;
+        }
+        .liquid-glint {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 100%);
+        }
+        .filigree-tl { border-top: 2px solid #af8d11; border-left: 2px solid #af8d11; width: 20px; height: 20px; position: absolute; top: 0; left: 0; opacity: 0.4; }
+        .filigree-br { border-bottom: 2px solid #af8d11; border-right: 2px solid #af8d11; width: 20px; height: 20px; position: absolute; bottom: 0; right: 0; opacity: 0.4; }
+    </style>
+</head>
+<body class="p-4 inline-block bg-[#0e0e0e]">
+<!-- Compact Character Panel Container -->
+<div class="gothic-panel w-full max-w-md p-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-outline-variant/20 relative group">
+<!-- Filigree Ornaments -->
+<div class="filigree-tl"></div>
+<div class="filigree-br"></div>
+<div class="flex gap-4 items-center">
+<!-- Portrait Frame -->
+<div class="relative flex-shrink-0">
+<div class="w-24 h-24 border-2 border-secondary/40 p-1 bg-surface-container-lowest">
+<img alt="Gothic Character Portrait" class="w-full h-full object-cover" data-alt="Portrait of a dark gothic warrior with glowing red eyes and heavy obsidian armor, moody dramatic lighting from below" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhqSFlYxL9HGDfe4YQbcOTJ6PfaB34t9TSJqsFtqLJn-o6_BY-1A1JcgFe15MCLBw4wrtJ2ObU5jMgvGwNmo6cLem-SdCyIndeSeO1sxwINBFnb5Nb3Kcnxe9AVqLuLs8SYHwS7yLtY-FfO6aasq08chfn5heq6oS4UbpNz_obEKpof3eE6_NYUhW5e3QsOsJSC6M_8oGr_Z6-Lzyf6dk4C7MpxJs9YNMEPhEURUG9UW7NoQ_qImaTwSJM6tghzatYkVePM484T3I"/>
+</div>
+<!-- Level Badge -->
+<div class="absolute -bottom-2 -right-2 bg-surface-container-highest border border-secondary px-2 py-0.5 text-[10px] text-secondary font-bold tracking-widest uppercase">LVL 1</div>
+</div>
+<!-- Stats Info Area -->
+<div class="flex-grow space-y-3">
+<!-- Character Name & Status Icons -->
+<div class="flex justify-between items-end border-b border-outline-variant/30 pb-1">
+<h1 class="text-2xl font-black text-on-surface tracking-tighter uppercase leading-none">
+                        DARK BLOOD
+                    </h1>
+</div>
+<!-- Resource Bars -->
+<div class="space-y-2">
+<!-- HP Bar -->
+<div class="space-y-0.5">
+<div class="flex justify-between items-center text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
+<span>Vitality</span>
+<span class="text-primary">1,420 / 1,420</span>
+</div>
+<div class="h-4 bg-surface-container-lowest border border-outline-variant/20 relative overflow-hidden">
+<!-- End Cap Ornament -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary shadow-[0_0_5px_rgba(233,195,73,0.5)] z-10"></div>
+<!-- Bar Fill -->
+<div class="h-full bg-gradient-to-r from-primary-container to-primary relative w-[100%]">
+<div class="absolute inset-0 liquid-glint"></div>
+</div>
+</div>
+</div>
+<!-- MP Bar -->
+<div class="space-y-0.5">
+<div class="flex justify-between items-center text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
+<span>Essence</span>
+<span class="text-blue-400">580 / 800</span>
+</div>
+<div class="h-3 bg-surface-container-lowest border border-outline-variant/20 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-zinc-400 z-10"></div>
+<div class="h-full bg-gradient-to-r from-blue-900 to-blue-600 relative w-[72%]">
+<div class="absolute inset-0 liquid-glint"></div>
+</div>
+</div>
+</div>
+<!-- EXP Bar -->
+<div class="space-y-0.5">
+<div class="h-1.5 bg-surface-container-lowest border border-outline-variant/10 relative overflow-hidden">
+<div class="h-full bg-secondary-container w-[45%]"></div>
+</div>
+<div class="flex justify-end text-[8px] uppercase tracking-[0.2em] text-on-secondary-fixed-variant">
+                            Soul Progress: 45%
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Utility Tray (Subtle interactables) -->
+</div>
+</body></html>
